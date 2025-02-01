@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { AuthFormData } from "../interfaces/form-data";
+import { User } from "../interfaces/user";
 import { map, of, timer } from "rxjs";
 
 @Injectable()
@@ -17,7 +17,7 @@ export class ApiService {
     return Boolean(Math.random() < 0.5);
   }
 
-  submitForm(data: AuthFormData) {
+  submitForm(data: User) {
     return this.checkConnection().pipe(
       map(() => timer(2000)),
       map(() => {

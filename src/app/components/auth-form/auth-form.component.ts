@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ApiService } from '../../services/api.service';
-import { AuthFormData } from '../../interfaces/form-data';
-import { concat, map, Observable, of } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { concat, map, Observable, of } from 'rxjs';
+import { ApiService } from '../../services/api.service';
+import { User } from '../../interfaces/user';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-auth-form',
@@ -17,6 +18,7 @@ export class AuthFormComponent {
 
   private readonly fb = inject(FormBuilder);
   private readonly apiService = inject(ApiService);
+  private readonly authService = inject(AuthService);
 
   public readonly form: FormGroup;
   public readonly submitDisabled$: Observable<boolean>;
@@ -37,10 +39,10 @@ export class AuthFormComponent {
     }
 
     this.isLoading = true;
-    this.apiService.submitForm(this.form.value as AuthFormData)
+    this.apiService.submitForm(this.form.value as User)
       .subscribe({
         next: (data) => {
-          console.log(data);
+          this.authService.signIn(data);
         },
         error: (err) => {
           console.error(err);
