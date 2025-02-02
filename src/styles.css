@@ -1,10 +1,12 @@
 :root {
-  --primary: #ffebf5;
-  --bg-blur: rgba(255, 255, 255, .2);
-  --bg-primary: #14000a;
-  --bg-secondary: #270014;
-  --invalid: #ff1489;
-  --border: #ffb1d8;
+  --primary: oklch(95.88% 0.0252 345.82);
+  --bg-blur: oklch(100% 0 0 / 20%);
+  --bg-primary: oklch(12.66% 0.0532 347.99);
+  --bg-secondary: oklch(17.87% 0.0737 353.06);
+  --invalid: oklch(65.17% 0.2581 0.08);
+  --border: oklch(84.56% 0.1026579399612716 348.10311459213074);
+  --md: 968px;
+  --sm: 578px;
 }
 
 * {
@@ -27,13 +29,13 @@ body {
   height: 100%;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: var(--md)) {
   html {
     font-size: 20px;
   }
 }
 
-@media screen and (max-width: 578px) {
+@media screen and (max-width: var(--sm)) {
   html {
     font-size: 16px;
   }

@@ -75,13 +75,13 @@
   text-align: center;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: var(--md)) {
   :host {
     max-width: 400px;
   }
 }
 
-@media screen and (max-width: 578px) {
+@media screen and (max-width: var(--sm)) {
   :host {
     max-width: 300px;
   }
