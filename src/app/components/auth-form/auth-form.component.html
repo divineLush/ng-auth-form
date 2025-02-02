@@ -1,14 +1,10 @@
-<form class="auth-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+<form class="auth-form" [ngClass]="{ 'loading': isLoading }" [formGroup]="form" (ngSubmit)="onSubmit()">
   <h1 class="title">Sign In</h1>
   <app-auth-input placeholder="Email" id="email" type="email" [readonly]="isLoading" formControlName="email"></app-auth-input>
   <app-auth-input placeholder="Password" id="password" type="password" [readonly]="isLoading" formControlName="password"></app-auth-input>
   <button class="submit-btn" type="submit" [disabled]="form.pristine || form.invalid">Sign In</button>
+
+  @if (error) {
+    <p class="error">{{ error }}</p>
+  }
 </form>
-
-@if (isLoading) {
-  <p>loading</p>
-}
-
-@if (error) {
-  <p>{{ error }}</p>
-}

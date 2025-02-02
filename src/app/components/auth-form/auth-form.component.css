@@ -5,12 +5,17 @@
 
 .auth-form {
   margin: auto;
-  padding: .8rem;
+  padding: 1rem;
+  position: relative;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   background: var(--bg-primary);
+}
+
+.auth-form.loading {
+  opacity: .7;
 }
 
 .title {
@@ -32,4 +37,13 @@
 
 .submit-btn:focus {
   outline: .06rem solid var(--invalid);
+}
+
+.error {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  margin: 0;
+  bottom: -3rem;
 }
