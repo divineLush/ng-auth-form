@@ -6,7 +6,7 @@ import { map, Observable, throwError, timer } from "rxjs";
 export class ApiService {
   private checkConnection() {
     if (!navigator.onLine) {
-      throw new Error('Oops! Connection Error')
+      throw new Error('Please check your internet connection and try again.')
     }
   }
 
@@ -24,7 +24,7 @@ export class ApiService {
     return timer(3000).pipe(
       map(() => {
         if (this.hasError()) {
-          throw new Error('Oops! Something went wrong with your login');
+          throw new Error('Please check your email and password and try again.');
         }
 
         return data;

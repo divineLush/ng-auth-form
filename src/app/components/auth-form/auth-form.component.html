@@ -4,6 +4,11 @@
   <app-auth-input placeholder="Password" id="password" type="password" [readonly]="isLoading" formControlName="password"></app-auth-input>
   <button class="submit-btn" type="submit" [disabled]="form.pristine || form.invalid">Sign In</button>
 
+  <footer class="hint">
+    <a class="link" [routerLink]="['/']">Forgot password?</a>
+    <a class="link" [routerLink]="['/']">Sign Up</a>
+  </footer>
+
   @if (error) {
     <p class="error">{{ error }}</p>
   }

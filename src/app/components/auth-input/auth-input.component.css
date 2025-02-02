@@ -4,20 +4,23 @@
 }
 
 .auth-input {
-  color: inherit;
-  font-size: inherit;
-  line-height: inherit;
+  color: var(--primary);
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1rem;
   width: 100%;
   padding: .4rem;
   background: transparent;
   border: none;
-  border-bottom: .06rem solid #ffb1d8;
-  backdrop-filter: blur(10px);
-  font-family: inherit;
+  border-bottom: .06rem solid var(--border);
   line-height: 1;
+  -webkit-text-fill-color: var(--primary) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
 }
 
 .auth-input:focus {
   border: none;
   outline: .06rem solid var(--primary);
+  outline-offset: .06rem;
 }
