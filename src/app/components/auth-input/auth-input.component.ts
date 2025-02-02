@@ -1,5 +1,5 @@
-import { Component, input } from '@angular/core';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, forwardRef, input } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-auth-input',
@@ -8,19 +8,19 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
     {
       provide: NG_VALUE_ACCESSOR,
       multi: true,
-      useExisting: AuthInputComponent,
+      useExisting: forwardRef(() => AuthInputComponent),
     },
   ],
   templateUrl: './auth-input.component.html',
   styleUrl: './auth-input.component.css'
 })
-export class AuthInputComponent {
+export class AuthInputComponent implements ControlValueAccessor {
   label = input.required<string>();
   id = input.required<string>();
   type = input.required<string>();
   readonly = input.required<boolean>();
 
-  value!: string;
+  value: string = '';
 
   onChange: (value: string) => void = () => {};
   onTouched: () => void = () => {};
