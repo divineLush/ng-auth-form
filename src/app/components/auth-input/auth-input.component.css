@@ -1,3 +1,9 @@
 :host.ng-invalid.ng-touched div {
   background: red;
 }
+
+.auth-input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

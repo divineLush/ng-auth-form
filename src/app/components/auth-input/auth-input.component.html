@@ -1,6 +1,7 @@
-<div>
+<div class="auth-input">
   <label [for]="id()">{{ label() }}</label>
   <input
+    aria-required="true"
     [type]="type()"
     [id]="id()"
     [readonly]="readonly()"
