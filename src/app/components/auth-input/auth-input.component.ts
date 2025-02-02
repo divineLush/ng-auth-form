@@ -15,7 +15,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   styleUrl: './auth-input.component.css'
 })
 export class AuthInputComponent implements ControlValueAccessor {
-  label = input.required<string>();
+  placeholder = input.required<string>();
   id = input.required<string>();
   type = input.required<'email' | 'password'>();
   readonly = input.required<boolean>();

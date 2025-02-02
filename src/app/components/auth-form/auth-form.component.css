@@ -1,7 +1,35 @@
-.auth-form {
+:host {
+  width: 100%;
   max-width: 400px;
+}
+
+.auth-form {
   margin: auto;
+  padding: .8rem;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  background: var(--bg-primary);
+}
+
+.title {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  padding: .4rem;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--pink-secondary);
+  background: var(--primary);
+  border: none;
+  border-radius: 4px;
+}
+
+.submit-btn:focus {
+  outline: .06rem solid var(--invalid);
 }

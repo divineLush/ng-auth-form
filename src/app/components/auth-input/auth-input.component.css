@@ -1,9 +1,23 @@
-:host.ng-invalid.ng-touched div {
-  background: red;
+:host.ng-invalid.ng-touched .auth-input {
+  color: var(--invalid);
+  border-color: var(--invalid);
 }
 
 .auth-input {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  width: 100%;
+  padding: .4rem;
+  background: transparent;
+  border: none;
+  border-bottom: .06rem solid #ffb1d8;
+  backdrop-filter: blur(10px);
+  font-family: inherit;
+  line-height: 1;
+}
+
+.auth-input:focus {
+  border: none;
+  outline: .06rem solid var(--primary);
 }
