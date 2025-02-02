@@ -1,0 +1,4 @@
+<div>
+  <label [for]="id()">{{ label() }}</label>
+  <input [type]="type()" [id]="id()" [readonly]="readonly()" formControlName="email" (input)="onInput($event)">
+</div>

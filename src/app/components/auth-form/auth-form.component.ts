@@ -4,10 +4,11 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
 import { ApiService } from '../../services/api.service';
 import { User } from '../../interfaces/user';
 import { AuthService } from '../../services/auth.service';
+import { AuthInputComponent } from '../auth-input/auth-input.component';
 
 @Component({
   selector: 'app-auth-form',
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, AuthInputComponent],
   providers: [ApiService],
   templateUrl: './auth-form.component.html',
   styleUrl: './auth-form.component.css'

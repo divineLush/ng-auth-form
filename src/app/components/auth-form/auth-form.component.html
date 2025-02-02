@@ -1,12 +1,6 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="email">Email</label>
-    <input type="email" id="email" formControlName="email" [readonly]="isLoading">
-  </div>
-  <div>
-    <label for="password">Password</label>
-    <input type="password" id="password" formControlName="password" [readonly]="isLoading">
-  </div>
+  <app-auth-input label="Email" id="email" type="email" [readonly]="isLoading" formControlName="email"></app-auth-input>
+  <app-auth-input label="Password" id="password" type="password" [readonly]="isLoading" formControlName="password"></app-auth-input>
   <button type="submit" [disabled]="form.invalid">Sign In</button>
 </form>
 
