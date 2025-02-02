@@ -1,4 +1,10 @@
 <div>
   <label [for]="id()">{{ label() }}</label>
-  <input [type]="type()" [id]="id()" [readonly]="readonly()" formControlName="email" (input)="onInput($event)">
+  <input
+    [type]="type()"
+    [id]="id()"
+    [readonly]="readonly()"
+    (input)="onInput($event)"
+    (blur)="onBlur()"
+  >
 </div>

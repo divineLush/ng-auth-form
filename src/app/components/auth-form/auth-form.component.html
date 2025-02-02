@@ -1,7 +1,7 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <app-auth-input label="Email" id="email" type="email" [readonly]="isLoading" formControlName="email"></app-auth-input>
   <app-auth-input label="Password" id="password" type="password" [readonly]="isLoading" formControlName="password"></app-auth-input>
-  <button type="submit" [disabled]="form.invalid">Sign In</button>
+  <button type="submit" [disabled]="form.pristine || form.invalid">Sign In</button>
 </form>
 
 @if (isLoading) {

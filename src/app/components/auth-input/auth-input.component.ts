@@ -17,7 +17,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 export class AuthInputComponent implements ControlValueAccessor {
   label = input.required<string>();
   id = input.required<string>();
-  type = input.required<string>();
+  type = input.required<'email' | 'password'>();
   readonly = input.required<boolean>();
 
   value: string = '';
@@ -40,6 +40,9 @@ export class AuthInputComponent implements ControlValueAccessor {
   onInput(event: Event) {
     this.value = (event.target as HTMLInputElement).value;
     this.onChange(this.value);
+  }
+
+  onBlur() {
     this.onTouched();
   }
 }

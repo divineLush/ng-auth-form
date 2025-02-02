@@ -25,6 +25,7 @@ export class AuthService {
     if (this.isUserValid(value)) {
       this._isSignedIn = true;
       this.router.navigate([AppRoutes.PROTECTED]);
+      console.log(`LOGGED IN AS ${value.email}`);
     } else {
       throw new Error('Invalid credentia s');
     }
