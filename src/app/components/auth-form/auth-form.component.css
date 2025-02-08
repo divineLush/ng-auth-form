@@ -1,6 +1,6 @@
 :host {
   width: 100%;
-  max-width: 450px;
+  max-width: 20rem;
   background: var(--bg-blur);
   border-radius: 16px;
   backdrop-filter: blur(40px) saturate(1.4);
@@ -93,16 +93,4 @@
   font-size: .7rem;
   line-height: .7rem;
   text-align: center;
-}
-
-@media screen and (max-width: var(--md)) {
-  :host {
-    max-width: 400px;
-  }
-}
-
-@media screen and (max-width: var(--sm)) {
-  :host {
-    max-width: 300px;
-  }
 }
