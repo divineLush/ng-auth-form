@@ -29,6 +29,12 @@
 .link {
   font-size: .7rem;
   line-height: .7rem;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+  text-decoration: underline;
 }
 
 .link:focus {
@@ -36,7 +42,7 @@
   outline-offset: 1px;
 }
 
-.link:visited {
+.link:any-link {
   color: var(--primary);
 }
 
