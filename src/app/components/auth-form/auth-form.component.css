@@ -17,7 +17,7 @@
 }
 
 .auth-form.loading {
-  opacity: .7;
+  opacity: .8;
 }
 
 .title {
@@ -50,6 +50,14 @@
   background: var(--border);
   border: none;
   border-radius: 4px;
+  cursor: pointer;
+  transition: opacity .4s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:active,
+.submit-btn:focus {
+  opacity: .8;
 }
 
 .submit-btn:focus {
