@@ -1,10 +1,10 @@
 :host.ng-invalid.ng-touched .auth-input {
-  color: var(--invalid);
   border-color: var(--invalid);
 }
 
 .auth-input {
   color: var(--primary);
+  caret-color: var(--primary);
   font-family: inherit;
   font-size: 1rem;
   line-height: 1rem;
