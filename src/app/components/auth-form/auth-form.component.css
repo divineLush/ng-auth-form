@@ -60,8 +60,8 @@
   transition: opacity .4s ease;
 }
 
-.submit-btn:hover,
-.submit-btn:active,
+.submit-btn:not(:disabled):hover,
+.submit-btn:not(:disabled):active,
 .submit-btn:focus {
   opacity: .8;
 }
