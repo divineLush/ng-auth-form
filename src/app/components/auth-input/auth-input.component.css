@@ -17,6 +17,9 @@
   -webkit-text-fill-color: var(--primary) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .auth-input:focus {

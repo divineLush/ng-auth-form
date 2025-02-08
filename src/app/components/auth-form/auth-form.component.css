@@ -58,6 +58,9 @@
   border-radius: 4px;
   cursor: pointer;
   transition: opacity .4s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .submit-btn:not(:disabled):hover,
