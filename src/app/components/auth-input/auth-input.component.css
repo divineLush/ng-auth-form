@@ -12,7 +12,7 @@
   padding: .4rem;
   background: transparent;
   border: none;
-  border-bottom: .06rem solid var(--border);
+  border-bottom: 1px solid var(--border);
   line-height: 1;
   -webkit-text-fill-color: var(--primary) !important;
   -webkit-background-clip: text !important;
@@ -21,6 +21,6 @@
 
 .auth-input:focus {
   border: none;
-  outline: .06rem solid var(--primary);
-  outline-offset: .06rem;
+  outline: 1px solid var(--primary);
+  outline-offset: 1px;
 }

@@ -3,6 +3,7 @@
   --bg-blur: oklch(100% 0 0 / 20%);
   --bg-primary: oklch(12.66% 0.0532 347.99);
   --bg-secondary: oklch(17.87% 0.0737 353.06);
+  --bg-tertiary: oklch(22.96% 0.0939 356.22);
   --invalid: oklch(65.17% 0.2581 0.08);
   --border: oklch(84.56% 0.1026579399612716 348.10311459213074);
   --md: 968px;
@@ -30,6 +31,8 @@ body {
   margin: 0;
   font-size: 1rem;
   height: 100%;
+  color: var(--primary);
+  background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary), var(--bg-tertiary));
 }
 
 @media screen and (max-width: var(--md)) {

@@ -1,17 +1,19 @@
 :host {
   width: 100%;
   max-width: 450px;
+  background: var(--bg-blur);
+  border-radius: 16px;
+  backdrop-filter: blur(40px) saturate(1.4);
+  outline: 1px solid oklch(84.56% 0.1026579399612716 348.10311459213074 / 30%);
 }
 
 .auth-form {
   margin: auto;
   padding: 1rem;
   position: relative;
-  border-radius: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background: var(--bg-blur);
 }
 
 .auth-form.loading {
@@ -30,8 +32,8 @@
 }
 
 .link:focus {
-  outline: .06rem solid var(--primary);
-  outline-offset: .06rem;
+  outline: 1px solid var(--primary);
+  outline-offset: 1px;
 }
 
 .link:visited {
@@ -51,8 +53,8 @@
 }
 
 .submit-btn:focus {
-  outline: .06rem solid var(--primary);
-  outline-offset: .06rem;
+  outline: 1px solid var(--primary);
+  outline-offset: 1px;
 }
 
 .hint {
