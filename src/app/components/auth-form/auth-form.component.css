@@ -66,6 +66,10 @@
   opacity: .8;
 }
 
+.submit-btn:disabled {
+  cursor: not-allowed;
+}
+
 .submit-btn:focus {
   outline: 1px solid var(--primary);
   outline-offset: 1px;
