@@ -4,7 +4,7 @@ import { map, Observable, throwError, timeout, timer } from "rxjs";
 
 @Injectable()
 export class ApiService {
-  private readonly apiTimeout = 10000;
+  private readonly apiTimeout = 7000;
 
   private checkConnection() {
     if (!navigator.onLine) {
@@ -17,7 +17,7 @@ export class ApiService {
   }
 
   private getTimeout() {
-    return Math.floor(Math.random() * 27000) + 3000;
+    return Math.floor(Math.random() * 10000) + 3000;
   }
 
   submitForm(data: User): Observable<User> {
