@@ -27,7 +27,7 @@ export class AuthService {
       this.router.navigate([AppRoutes.PROTECTED]);
       console.log(`LOGGED IN AS ${value.email}`);
     } else {
-      throw new Error('Invalid credentia s');
+      throw new Error('Invalid credentials');
     }
   }
 }
