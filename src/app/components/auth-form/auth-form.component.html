@@ -2,7 +2,7 @@
   <h1 class="title">Sign In</h1>
   <app-auth-input placeholder="Email" id="email" type="email" [readonly]="isLoading" formControlName="email"></app-auth-input>
   <app-auth-input placeholder="Password" id="password" type="password" [readonly]="isLoading" formControlName="password"></app-auth-input>
-  <button class="submit-btn" type="submit" [disabled]="form.pristine || form.invalid">Sign In</button>
+  <button class="submit-btn" type="submit" [disabled]="form.pristine || form.invalid || isLoading">Sign In</button>
 
   <footer class="hint">
     <a class="link" [routerLink]="['/']">Forgot password?</a>

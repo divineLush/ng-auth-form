@@ -17,7 +17,8 @@
 }
 
 .auth-form.loading {
-  opacity: .8;
+  pointer-events: none;
+  opacity: .7;
 }
 
 .title {
@@ -66,7 +67,7 @@
 .submit-btn:not(:disabled):hover,
 .submit-btn:not(:disabled):active,
 .submit-btn:focus {
-  opacity: .8;
+  opacity: .7;
 }
 
 .submit-btn:disabled {
